@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTR Oficina Especializada em Nissan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nissan: { red: '#c3002f', dark: '#121212', light: '#f4f4f4' }
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="./main.js" defer></script>
+</head>
+<body class="bg-nissan-light text-gray-800 font-sans antialiased">
+
+    <header class="bg-nissan-dark text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-wider">
+                <span class="text-nissan-red">Nissan GTR</span> Nismo
+            </div>
+            
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="hover:text-nissan-red transition-colors">Início</a>
+                <a href="#filosofia" class="hover:text-nissan-red transition-colors">Nossa Visão</a>
+                <a href="#servicos" class="hover:text-nissan-red transition-colors">Serviços</a>
+                <a href="#produtos" class="hover:text-nissan-red transition-colors">Store</a>
+                <a href="#blog" class="hover:text-nissan-red transition-colors">Blog</a>
+            </nav>
+
+            <button id="btn-mobile" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+   <section id="home" class="relative bg-cover bg-center bg-no-repeat text-white py-80 border-b-4 border-nissan-red" style="background-image: url('./img/gifnissan.gif');">
+        
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        
+        <div class="relative z-10 container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">A maior autoridade no seu <span class="text-nissan-red">Nissan</span></h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-gray-200 drop-shadow-md">
+                Mais que uma oficina, um ecossistema de soluções automotivas. Transparência, tecnologia de ponta e conhecimento técnico avançado.
+            </p>
+        </div>
+        
+    </section>
+
+    <section id="filosofia" class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center max-w-4xl">
+            <h2 class="text-3xl font-bold text-nissan-dark mb-6">Filosofia de Excelência</h2>
+            <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                Inspirados pelos mais altos padrões japoneses de engenharia, nossa missão é elevar o nível da manutenção automotiva. Aqui, dados e diagnósticos precisos substituem o "achismo". Combinamos equipamentos de ponta com um atendimento transparente para garantir o melhor desempenho da sua máquina.
+            </p>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-16 bg-nissan-light container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-nissan-dark">Car Service</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="scroll-animate bg-white p-6 rounded-lg shadow-md border-t-4 border-nissan-red hover:shadow-xl transition-shadow">
+                <h3 class="text-xl font-bold mb-2">Diagnóstico Computadorizado</h3>
+                <p class="text-gray-600">Scanners OEM para mapeamento completo da eletrônica embarcada.</p>
+            </div>
+            <div class="scroll-animate bg-white p-6 rounded-lg shadow-md border-t-4 border-nissan-red hover:shadow-xl transition-shadow">
+                <h3 class="text-xl font-bold mb-2">Câmbio Xtronic CVT</h3>
+                <p class="text-gray-600">Troca de fluido 100% via máquina e substituição de filtros.</p>
+            </div>
+            <div class="scroll-animate bg-white p-6 rounded-lg shadow-md border-t-4 border-nissan-red hover:shadow-xl transition-shadow">
+                <h3 class="text-xl font-bold mb-2">Injeção Direta</h3>
+                <p class="text-gray-600">Limpeza e equalização de bicos de motores modernos como o MR20DD.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-nissan-dark">Nossa Estrutura</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="overflow-hidden rounded-lg shadow-md h-64 bg-gray-200">
+                    <img src="./img/oficina1.jpg" alt="Estrutura GTR Oficina" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                
+                <div class="overflow-hidden rounded-lg shadow-md h-64 bg-gray-200">
+                    <img src="./img/oficina2.jpg" alt="Equipamentos de Diagnóstico" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                
+                <div class="overflow-hidden rounded-lg shadow-md h-64 bg-gray-200">
+                    <img src="./img/oficina3.jpg" alt="Manutenção Nissan" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Nissan Store</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                
+                <div class="bg-nissan-dark p-6 rounded-lg text-center border border-gray-700 hover:border-nissan-red transition-colors duration-300">
+                    <div class="h-48 bg-gray-800 rounded mb-4 flex items-center justify-center p-4 overflow-hidden">
+                        <img src="./img/arrefecimento.png" alt="Aditivo Arrefecimento Nissan" class="h-full w-auto object-contain drop-shadow-xl transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Aditivo Arrefecimento</h3>
+                    <p class="text-sm text-gray-400 mb-6">Especificação Long Life Nissan.</p>
+                    <button class="w-full bg-nissan-red py-3 rounded font-bold hover:bg-red-700 transition-colors">Comprar</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-nissan-dark">Conteúdo Técnico</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <article class="flex flex-col md:flex-row gap-4 items-center bg-nissan-light p-4 rounded-lg">
+                    <div class="w-full md:w-1/3 h-32 bg-gray-300 rounded"></div>
+                    <div class="w-full md:w-2/3">
+                        <span class="text-nissan-red text-sm font-bold">MANUTENÇÃO</span>
+                        <h3 class="text-xl font-bold mt-1 mb-2">Quando trocar o óleo do câmbio CVT do Kicks?</h3>
+                        <p class="text-gray-600 text-sm">Entenda os prazos recomendados e os sinais de que seu câmbio precisa de atenção.</p>
+                        <a href="#" class="text-nissan-red font-semibold text-sm mt-2 inline-block">Leia mais »</a>
+                    </div>
+                </article>
+                <article class="flex flex-col md:flex-row gap-4 items-center bg-nissan-light p-4 rounded-lg">
+                    <div class="w-full md:w-1/3 h-32 bg-gray-300 rounded"></div>
+                    <div class="w-full md:w-2/3">
+                        <span class="text-nissan-red text-sm font-bold">TECNOLOGIA</span>
+                        <h3 class="text-xl font-bold mt-1 mb-2">Luz de injeção acesa no Sentra: O que pode ser?</h3>
+                        <p class="text-gray-600 text-sm">As principais causas e como o diagnóstico computadorizado resolve o problema.</p>
+                        <a href="#" class="text-nissan-red font-semibold text-sm mt-2 inline-block">Leia mais »</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="localizacao" class="bg-white py-16 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-nissan-dark">Como Chegar à Nossa Oficina</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+                
+                <div class="w-full md:w-1/3 space-y-6">
+                    <div class="bg-nissan-light p-8 rounded-lg shadow-md border-l-4 border-nissan-red">
+                        <h3 class="text-2xl font-bold text-nissan-dark mb-4">GTR Oficina</h3>
+                        
+                        <div class="flex items-start gap-3 mb-4 text-gray-700">
+                            <svg class="w-6 h-6 text-nissan-red mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <p class="leading-relaxed">
+                                Av. Jaguaribe, 13 - Jaguaribe<br>
+                                Osasco - SP, 06050-020
+                            </p>
+                        </div>
+                        
+                        <div class="flex items-center gap-3 text-gray-700 mb-6">
+                            <svg class="w-6 h-6 text-nissan-red flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <p>Seg - Sex: 08:00 às 18:00</p>
+                        </div>
+
+                        <a href="https://maps.google.com/maps?daddr=Av.+Jaguaribe,+13+-+Jaguaribe,+Osasco+-+SP,+06050-020" target="_blank" class="block w-full text-center bg-nissan-dark text-white font-bold py-3 rounded hover:bg-black transition-colors">
+                            Traçar Rota
+                        </a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3 h-96 rounded-lg overflow-hidden shadow-lg border-2 border-gray-100 relative">
+                    <iframe 
+                        class="absolute top-0 left-0 w-full h-full"
+                        frameborder="0" 
+                        scrolling="no" 
+                        marginheight="0" 
+                        marginwidth="0" 
+                        src="https://maps.google.com/maps?q=Av.%20Jaguaribe,%2013,%20Jaguaribe,%20Osasco%20-%20SP,%2006050-020&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        title="Localização da Nissan GTR Oficina Especializada">
+                    </iframe>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-nissan-dark text-gray-400 pt-16 pb-8 border-t-4 border-nissan-red">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <div>
+                    <div class="text-2xl font-bold tracking-wider text-white mb-4">
+                        <span class="text-nissan-red">Nissan GTR</span> Nismo
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Nissan GTR Nismo Oficina Especializada: Eletrônica Avançada e Mecânica Geral Nissan. Seu carro entregue a verdadeiros especialistas.
+                    </p>
+                    <div class="flex space-x-4 font-bold text-sm">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">YouTube</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Institucional</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#filosofia" class="hover:text-nissan-red transition-colors">Nossa Visão</a></li>
+                        <li><a href="#servicos" class="hover:text-nissan-red transition-colors">Car Service</a></li>
+                        <li><a href="#produtos" class="hover:text-nissan-red transition-colors">Store</a></li>
+                        <li><a href="#blog" class="hover:text-nissan-red transition-colors">Conteúdo Técnico</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Onde Estamos</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li>Av. Jaguaribe, 13 - Jaguaribe</li>
+                        <li>Osasco - SP, 06050-020</li>
+                        <li class="mt-4"><span class="font-bold text-white">WhatsApp:</span> (11) 99999-9999</li>
+                        <li><span class="font-bold text-white">Email:</span> contato@gtroficina.com.br</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Novidades</h4>
+                    <p class="text-sm mb-4">Receba dicas de manutenção e ofertas da nossa loja diretamente no seu e-mail.</p>
+                    <form id="form-newsletter" class="flex flex-col space-y-2">
+                        <input type="email" placeholder="Seu melhor e-mail" required class="bg-gray-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-nissan-red border border-gray-700">
+                        <button type="submit" class="bg-nissan-red text-white font-bold py-2 rounded hover:bg-red-700 transition-colors">Assinar</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2026 Nissan GTR Nismo Oficina Especializada ® • Todos os direitos reservados.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidade</a>
+                    <a href="#" class="hover:text-white transition-colors">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </body>
+</html>
