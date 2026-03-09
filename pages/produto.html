@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Produto</title>
+    
+    <meta name="description" content="Compre peças e fluidos genuínos Nissan online na GTR Oficina. Aditivos, óleos de câmbio CVT e muito mais com envio imediato.">
+    <meta name="keywords" content="comprar peças nissan, loja oficina nissan, aditivo long life, óleo ns3, peças originais nissan">
+    <meta name="robots" content="index, follow">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,38 +24,88 @@
             <a href="index.html" class="text-2xl font-bold tracking-wider hover:text-gray-300">
                 <span class="text-nissan-red">Nissan GTR</span> Nismo
             </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <button id="btn-login" class="text-gray-300 hover:text-white flex items-center gap-2 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    Área do Cliente
+                </button>
+                
+                <a href="./carrinho.html" class="relative text-gray-300 hover:text-white flex items-center gap-1 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-nissan-red text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full hidden shadow-lg">0</span>
+                </a>
+
+                <a href="#contato" class="bg-nissan-red px-6 py-2 rounded-md font-bold hover:bg-red-700 transition-all shadow-lg hover:shadow-red-900/50">
+                    Agendar
+                </a>
+            </div>
             <a href="../index.html" class="text-sm font-bold text-gray-300 hover:text-white">← Voltar para a Loja</a>
         </div>
     </header>
 
-    <main class="flex-grow bg-gray-900 text-white py-16" id="produto-container">
-        <div class="container mx-auto px-4 max-w-5xl">
+    <main class="flex-grow bg-gray-900 text-white py-12" id="produto-container">
+        <div class="container mx-auto px-4 max-w-6xl">
             
-            <div class="bg-nissan-dark rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-gray-700">
+            <nav class="text-sm text-gray-400 mb-8 flex items-center gap-2">
+                <a href="../index.html" class="hover:text-nissan-red">Início</a>
+                <span>/</span>
+                <a href="../index.html#produtos" class="hover:text-nissan-red">Loja</a>
+                <span>/</span>
+                <span id="breadcrumb-nome" class="text-gray-200">Detalhes do Produto</span>
+            </nav>
+
+            <div class="bg-nissan-dark rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row border border-gray-700">
                 
-                <div class="w-full md:w-1/2 p-8 bg-gray-800 flex items-center justify-center">
-                    <img id="prod-img" src="" alt="Carregando..." class="max-h-96 w-auto object-contain drop-shadow-2xl">
-                </div>
-
-                <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
-                    <span class="text-nissan-red font-bold text-sm tracking-widest mb-2 uppercase">Peça Genuína</span>
-                    <h1 id="prod-nome" class="text-3xl md:text-4xl font-bold mb-4">Carregando...</h1>
-                    
-                    <p id="prod-desc" class="text-gray-400 text-lg leading-relaxed mb-8">
-                        Aguarde, carregando informações do produto...
-                    </p>
-                    
-                    <div class="mt-auto">
-                        <p class="text-sm text-gray-400 mb-1">Preço à vista</p>
-                        <p id="prod-preco" class="text-4xl font-bold text-white mb-6">R$ 0,00</p>
-                        
-                        <button id="btn-add-carrinho" class="w-full bg-nissan-red py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-colors shadow-lg hover:shadow-red-900/50 flex items-center justify-center gap-2">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                                Adicionar ao Carrinho
-                            </button>
+                <div class="w-full lg:w-1/2 p-8 lg:p-16 bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center relative group">
+                    <div class="absolute top-6 left-6 bg-nissan-red text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider shadow-lg">
+                        Mais Vendido
                     </div>
+                    <img id="prod-img" src="" alt="Produto" class="max-h-[400px] w-auto object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-105">
                 </div>
 
+                <div class="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col">
+                    <span class="text-nissan-red font-bold text-sm tracking-widest mb-2 uppercase flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        Peça Genuína Nissan
+                    </span>
+                    
+                    <h1 id="prod-nome" class="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white">Carregando...</h1>
+                    
+                    <div class="bg-gray-800/50 p-6 rounded-xl border border-gray-700/50 mb-8 mt-4">
+                        <p class="text-sm text-gray-400 mb-1">Preço exclusivo online</p>
+                        <p id="prod-preco" class="text-4xl lg:text-5xl font-extrabold text-white mb-2">R$ 0,00</p>
+                        <p class="text-sm text-green-400 font-semibold flex items-center gap-1">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Envio imediato após confirmação
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <button id="btn-add-carrinho" class="flex-1 bg-nissan-red py-4 px-6 rounded-lg font-bold text-lg hover:bg-red-700 transition-all shadow-lg hover:shadow-red-900/50 flex items-center justify-center gap-3 transform hover:-translate-y-1">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            Adicionar ao Carrinho
+                        </button>
+                    </div>
+
+                    <div class="mb-8 border-t border-gray-700 pt-6">
+                        <h3 class="text-lg font-bold mb-3 text-white">Descrição do Produto</h3>
+                        <p id="prod-desc" class="text-gray-400 text-base leading-relaxed">
+                            Aguarde, carregando informações do produto...
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-auto">
+                        <div class="flex items-center gap-3 text-gray-400">
+                            <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                            <span class="text-sm font-medium">Compra 100% Segura</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-gray-400">
+                            <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span class="text-sm font-medium">Garantia de 90 dias</span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </main>
