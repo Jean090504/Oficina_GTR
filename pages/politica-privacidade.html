@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Nissan GTR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nissan: { red: '#c3002f', dark: '#121212', light: '#f4f4f4' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-nissan-light text-gray-800 font-sans antialiased">
+
+    <header class="bg-nissan-dark text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="../index.html" class="text-2xl font-bold tracking-wider">
+                <span class="text-nissan-red">Nissan </span> GTR
+            </a>
+            <a href="../index.html" class="text-sm font-bold border border-nissan-red px-4 py-2 rounded hover:bg-nissan-red transition-all">VOLTAR</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 max-w-4xl bg-white my-10 rounded-2xl shadow-sm">
+        <h1 class="text-3xl font-bold text-nissan-dark mb-8 border-b-4 border-nissan-red inline-block">Política de Privacidade</h1>
+        
+        <div class="space-y-6 text-gray-700 leading-relaxed">
+            <p>A <strong>Nissan GTR Oficina Especializada</strong>, valoriza a privacidade dos seus usuários. Esta política descreve como coletamos e usamos seus dados.</p>
+            
+            <h2 class="text-xl font-bold text-nissan-dark">1. Coleta de Informações</h2>
+            <p>Coletamos seu e-mail apenas quando você se inscreve voluntariamente em nossa newsletter. Também podemos coletar dados técnicos de navegação através de cookies para melhorar sua experiência no site.</p>
+            
+            <h2 class="text-xl font-bold text-nissan-dark">2. Uso dos Dados</h2>
+            <p>Seus dados são utilizados exclusivamente para enviar novidades, dicas técnicas de manutenção e promoções da oficina. Não compartilhamos suas informações com terceiros.</p>
+            
+            <h2 class="text-xl font-bold text-nissan-dark">3. Seus Direitos</h2>
+            <p>Você pode solicitar a exclusão do seu e-mail de nossa base de dados a qualquer momento através do link de descadastro nos e-mails ou entrando em contato direto conosco.</p>
+        </div>
+    </main>
+
+    <footer id="contato" class="bg-nissan-dark text-gray-400 pt-16 pb-24 md:pb-8 border-t-4 border-nissan-red">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="text-2xl font-bold tracking-wider text-white mb-4">
+                        <span class="text-nissan-red">Nissan </span>GTR
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        Nissan GTR Oficina Especializada: Eletrônica Avançada e Mecânica Geral Nissan. Seu carro entregue a verdadeiros especialistas.
+                    </p>
+                    <div class="flex space-x-4 font-bold text-sm">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Institucional</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#filosofia" class="hover:text-nissan-red transition-colors">Nossa Visão</a></li>
+                        <li><a href="#servicos" class="hover:text-nissan-red transition-colors">Car Service</a></li>
+                        <li><a href="#blog" class="hover:text-nissan-red transition-colors">Conteúdo Técnico</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Onde Estamos</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li>Av. Jaguaribe, 13 - Jaguaribe</li>
+                        <li>Osasco - SP, 06050-020</li>
+                        <li class="mt-4"><span class="font-bold text-white">WhatsApp:</span> (11) 99999-9999</li>
+                        <li><span class="font-bold text-white">Email:</span> contato@gtroficina.com.br</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white text-lg font-bold mb-4">Novidades</h4>
+                    <p class="text-sm mb-4">Receba dicas de manutenção e ofertas da nossa loja diretamente no seu e-mail.</p>
+                    <form id="form-newsletter" class="flex flex-col space-y-2">
+                        <input type="email" placeholder="Seu melhor e-mail" required class="bg-gray-800 text-white px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-nissan-red border border-gray-700">
+                        <button type="submit" class="bg-nissan-red text-white font-bold py-2 rounded hover:bg-red-700 transition-colors">Assinar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-center gap-6 md:gap-0">
+    
+                <p>© 2026 Nissan GTR Oficina Especializada ® • Todos os direitos reservados.</p>
+                
+                <div class="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                    <div class="flex gap-4">
+                        <a href="./politica-privacidade.html" class="hover:text-white transition-colors">Política de Privacidade</a>
+                        <span class="text-gray-700">•</span>
+                        <a href="./termos.html" class="hover:text-white transition-colors">Termos de Uso</a>
+                    </div>
+                    
+                    <div class="font-medium mt-2 md:mt-0">
+                        Desenvolvido por 
+                        <a href="https://www.linkedin.com/in/jeancostadev" target="_blank" class="text-white hover:text-red-600 transition-all border-b border-red-700 hover:border-red-400 pb-0.5 ml-1">
+                            Jean Costa
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </body>
+</html>
